@@ -4,11 +4,24 @@
 
 ## 🔧 Features
 - 🎨 **Real-time 3D Preview** of the customized keyboard.
-- ⚙️ **Customizable options** including keyboard kits, switches, and keycaps.
+
+- ⚙️ **Customizable options** including keyboard kits, switches, keycaps, and background images.
+
+- 🎹 **Supports multiple keyboard layouts**: 60%, 75%, Tenkeyless (TKL), and Full Size.
+
+- 🌈 **Switches with multiple color options** for better customization.
+
+- 🖌️ **Customizable keycaps** with different colors and styles.
+
+- 🖼️ **Selectable background images** to enhance the visual experience.
+
 - 🌐 **Built with Next.js & React Three Fiber** for smooth rendering.
+
 - 💡 **User-friendly UI** using Tailwind CSS.
+
 - 🖱️ **Interactive controls** to rotate and zoom the 3D model.
 
+- 🌍 **Multi-language support (English & Arabic)** for a better user experience.
 ## 🛠️ Tech Stack
 - **Frontend**: React, Next.js, Tailwind CSS
 - **3D Rendering**: React Three Fiber, Drei
