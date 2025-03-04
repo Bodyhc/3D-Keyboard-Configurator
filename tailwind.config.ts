@@ -25,6 +25,7 @@ const config: Config = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
+          "rgba(255, 255, 255, 0.1)",
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
