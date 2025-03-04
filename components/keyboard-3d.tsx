@@ -21,9 +21,9 @@ const LAYOUTS: Record<string, KeyboardKey[]> = {
   "60percent": [
     // First row (numbers)
     ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num, i) => ({
-position: [-4.5 + i, 0.25, -1.5] as [number, number, number],
+      position: [-4.5 + i, 0.25, -1.5] as [number, number, number],
       label: num.toString(),
-      arLabel: ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"][i],
+      arLabel: ['١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩', '٠'][i],
     })),
     // Second row (QWERTY/Arabic)
     ...["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"].map((letter, i) => ({
