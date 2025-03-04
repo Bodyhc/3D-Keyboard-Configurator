@@ -54,7 +54,7 @@ const LAYOUTS: Record<string, KeyboardKey[]> = {
   "75percent": [
     // First row (numbers + function keys)
     ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num, i) => ({
-      position: [-4.5 + i, 0.25, -2.5],
+      position: [-4.5 + i, 0.25, -2.5] as [number, number, number],
       label: num.toString(),
       arLabel: ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"][i],
     })),
@@ -73,53 +73,53 @@ const LAYOUTS: Record<string, KeyboardKey[]> = {
       "F11",
       "F12",
     ].map((key, i) => ({
-      position: [-5.5 + i, 0.25, -3.5],
+      position: [-5.5 + i, 0.25, -3.5] as [number, number, number],
       label: key,
       arLabel: key,
     })),
     // Second row (QWERTY/Arabic)
     ...["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"].map((letter, i) => ({
-      position: [-4.5 + i, 0.25, -1.5],
+      position: [-4.5 + i, 0.25, -1.5] as [number, number, number],
       label: letter,
       arLabel: ["ض", "ص", "ث", "ق", "ف", "غ", "ع", "ه", "خ", "ح"][i],
     })),
     // Third row (ASDF/Arabic)
     ...["A", "S", "D", "F", "G", "H", "J", "K", "L"].map((letter, i) => ({
-      position: [-4 + i, 0.25, -0.5],
+      position: [-4 + i, 0.25, -0.5] as [number, number, number],
       label: letter,
       arLabel: ["ش", "س", "ي", "ب", "ل", "ا", "ت", "ن", "م"][i],
     })),
     // Fourth row (ZXCV/Arabic)
     ...["Z", "X", "C", "V", "B", "N", "M"].map((letter, i) => ({
-      position: [-3.5 + i, 0.25, 0.5],
+      position: [-3.5 + i, 0.25, 0.5] as [number, number, number],
       label: letter,
       arLabel: ["ئ", "ء", "ؤ", "ر", "لا", "ى", "ة"][i],
     })),
     // Space bar
     {
-      position: [0, 0.25, 1.5],
+      position: [0, 0.25, 1.5] as [number, number, number],
       label: "SPACE",
       arLabel: "مسافة",
       size: [5, 1],
     },
     // Navigation keys
     {
-      position: [6, 0.25, -0.5],
+      position: [6, 0.25, -0.5] as [number, number, number],
       label: "↑",
       arLabel: "↑",
     },
     {
-      position: [5, 0.25, 0.5],
+      position: [5, 0.25, 0.5] as [number, number, number],
       label: "←",
       arLabel: "←",
     },
     {
-      position: [6, 0.25, 0.5],
+      position: [6, 0.25, 0.5] as [number, number, number],
       label: "↓",
       arLabel: "↓",
     },
     {
-      position: [7, 0.25, 0.5],
+      position: [7, 0.25, 0.5] as [number, number, number],
       label: "→",
       arLabel: "→",
     },
@@ -140,90 +140,90 @@ const LAYOUTS: Record<string, KeyboardKey[]> = {
       "F11",
       "F12",
     ].map((key, i) => ({
-      position: [-5.5 + i, 0.25, -3.5],
+      position: [-5.5 + i, 0.25, -3.5] as [number, number, number],
       label: key,
       arLabel: key,
     })),
     // First row (numbers)
     ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num, i) => ({
-      position: [-4.5 + i, 0.25, -2.5],
+      position: [-4.5 + i, 0.25, -2.5] as [number, number, number],
       label: num.toString(),
       arLabel: ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"][i],
     })),
     // Second row (QWERTY/Arabic)
     ...["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"].map((letter, i) => ({
-      position: [-4.5 + i, 0.25, -1.5],
+      position: [-4.5 + i, 0.25, -1.5] as [number, number, number],
       label: letter,
       arLabel: ["ض", "ص", "ث", "ق", "ف", "غ", "ع", "ه", "خ", "ح"][i],
     })),
     // Third row (ASDF/Arabic)
     ...["A", "S", "D", "F", "G", "H", "J", "K", "L"].map((letter, i) => ({
-      position: [-4 + i, 0.25, -0.5],
+      position: [-4 + i, 0.25, -0.5] as [number, number, number],
       label: letter,
       arLabel: ["ش", "س", "ي", "ب", "ل", "ا", "ت", "ن", "م"][i],
     })),
     // Fourth row (ZXCV/Arabic)
     ...["Z", "X", "C", "V", "B", "N", "M"].map((letter, i) => ({
-      position: [-3.5 + i, 0.25, 0.5],
+      position: [-3.5 + i, 0.25, 0.5] as [number, number, number],
       label: letter,
       arLabel: ["ئ", "ء", "ؤ", "ر", "لا", "ى", "ة"][i],
     })),
     // Space bar
     {
-      position: [0, 0.25, 1.5],
+      position: [0, 0.25, 1.5] as [number, number, number],
       label: "SPACE",
       arLabel: "مسافة",
       size: [5, 1],
     },
     // Navigation cluster
     {
-      position: [8, 0.25, -2.5],
+      position: [8, 0.25, -2.5] as [number, number, number],
       label: "INS",
       arLabel: "إدخال",
     },
     {
-      position: [9, 0.25, -2.5],
+      position: [9, 0.25, -2.5] as [number, number, number],
       label: "HOME",
       arLabel: "بداية",
     },
     {
-      position: [10, 0.25, -2.5],
+      position: [10, 0.25, -2.5] as [number, number, number],
       label: "PGUP",
       arLabel: "صفحة↑",
     },
     {
-      position: [8, 0.25, -1.5],
+      position: [8, 0.25, -1.5] as [number, number, number],
       label: "DEL",
       arLabel: "حذف",
     },
     {
-      position: [9, 0.25, -1.5],
+      position: [9, 0.25, -1.5] as [number, number, number],
       label: "END",
       arLabel: "نهاية",
     },
     {
-      position: [10, 0.25, -1.5],
+      position: [10, 0.25, -1.5] as [number, number, number],
       label: "PGDN",
       arLabel: "صفحة↓",
     },
     // Arrow keys
     {
-      position: [9, 0.25, 0.5],
+      position: [9, 0.25, 0.5] as [number, number, number],
       label: "↑",
       arLabel: "↑",
     },
     {
-      position: [8, 0.25, 1.5],
+      position: [8, 0.25, 1.5] as [number, number, number],
       label: "←",
       arLabel: "←",
     },
     {
-      position: [9, 0.25, 1.5],
+      position: [9, 0.25, 1.5] as [number, number, number],
       label: "↓",
       arLabel: "↓",
     },
     {
-      position: [10, 0.25, 1.5],
+      position: [10, 0.25, 1.5] as [number, number, number],
       label: "→",
       arLabel: "→",
     },
@@ -244,111 +244,111 @@ const LAYOUTS: Record<string, KeyboardKey[]> = {
       "F11",
       "F12",
     ].map((key, i) => ({
-      position: [-5.5 + i, 0.25, -3.5],
+      position: [-5.5 + i, 0.25, -3.5] as [number, number, number],
       label: key,
       arLabel: key,
     })),
     // First row (numbers)
     ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num, i) => ({
-      position: [-4.5 + i, 0.25, -2.5],
+      position: [-4.5 + i, 0.25, -2.5] as [number, number, number],
       label: num.toString(),
       arLabel: ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"][i],
     })),
     // Second row (QWERTY/Arabic)
     ...["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"].map((letter, i) => ({
-      position: [-4.5 + i, 0.25, -1.5],
+      position: [-4.5 + i, 0.25, -1.5] as [number, number, number],
       label: letter,
       arLabel: ["ض", "ص", "ث", "ق", "ف", "غ", "ع", "ه", "خ", "ح"][i],
     })),
     // Third row (ASDF/Arabic)
     ...["A", "S", "D", "F", "G", "H", "J", "K", "L"].map((letter, i) => ({
-      position: [-4 + i, 0.25, -0.5],
+      position: [-4 + i, 0.25, -0.5] as [number, number, number],
       label: letter,
       arLabel: ["ش", "س", "ي", "ب", "ل", "ا", "ت", "ن", "م"][i],
     })),
     // Fourth row (ZXCV/Arabic)
     ...["Z", "X", "C", "V", "B", "N", "M"].map((letter, i) => ({
-      position: [-3.5 + i, 0.25, 0.5],
+      position: [-3.5 + i, 0.25, 0.5] as [number, number, number],
       label: letter,
       arLabel: ["ئ", "ء", "ؤ", "ر", "لا", "ى", "ة"][i],
     })),
     // Space bar
     {
-      position: [0, 0.25, 1.5],
+      position: [0, 0.25, 1.5] as [number, number, number],
       label: "SPACE",
       arLabel: "مسافة",
       size: [5, 1],
     },
     // Navigation cluster
     {
-      position: [8, 0.25, -2.5],
+      position: [8, 0.25, -2.5] as [number, number, number],
       label: "INS",
       arLabel: "إدخال",
     },
     {
-      position: [9, 0.25, -2.5],
+      position: [9, 0.25, -2.5] as [number, number, number],
       label: "HOME",
       arLabel: "بداية",
     },
     {
-      position: [10, 0.25, -2.5],
+      position: [10, 0.25, -2.5] as [number, number, number],
       label: "PGUP",
       arLabel: "صفحة↑",
     },
     {
-      position: [8, 0.25, -1.5],
+      position: [8, 0.25, -1.5] as [number, number, number],
       label: "DEL",
       arLabel: "حذف",
     },
     {
-      position: [9, 0.25, -1.5],
+      position: [9, 0.25, -1.5] as [number, number, number],
       label: "END",
       arLabel: "نهاية",
     },
     {
-      position: [10, 0.25, -1.5],
+      position: [10, 0.25, -1.5] as [number, number, number],
       label: "PGDN",
       arLabel: "صفحة↓",
     },
     // Arrow keys
     {
-      position: [9, 0.25, 0.5],
+      position: [9, 0.25, 0.5] as [number, number, number],
       label: "↑",
       arLabel: "↑",
     },
     {
-      position: [8, 0.25, 1.5],
+      position: [8, 0.25, 1.5] as [number, number, number],
       label: "←",
       arLabel: "←",
     },
     {
-      position: [9, 0.25, 1.5],
+      position: [9, 0.25, 1.5] as [number, number, number],
       label: "↓",
       arLabel: "↓",
     },
     {
-      position: [10, 0.25, 1.5],
+      position: [10, 0.25, 1.5] as [number, number, number],
       label: "→",
       arLabel: "→",
     },
     // Numpad
     ...[7, 8, 9].map((num, i) => ({
-      position: [12 + i, 0.25, -1.5],
+      position: [12 + i, 0.25, -1.5] as [number, number, number],
       label: num.toString(),
       arLabel: ["٧", "٨", "٩"][i],
     })),
     ...[4, 5, 6].map((num, i) => ({
-      position: [12 + i, 0.25, -0.5],
+      position: [12 + i, 0.25, -0.5] as [number, number, number],
       label: num.toString(),
       arLabel: ["٤", "٥", "٦"][i],
     })),
     ...[1, 2, 3].map((num, i) => ({
-      position: [12 + i, 0.25, 0.5],
+      position: [12 + i, 0.25, 0.5] as [number, number, number],
       label: num.toString(),
       arLabel: ["١", "٢", "٣"][i],
     })),
     {
-      position: [13, 0.25, 1.5],
+      position: [13, 0.25, 1.5] as [number, number, number],
       label: "0",
       arLabel: "٠",
       size: [2, 1],
