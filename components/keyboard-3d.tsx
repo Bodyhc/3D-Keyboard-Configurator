@@ -18,7 +18,7 @@ interface Keyboard3DProps {
 }
 
 const LAYOUTS: Record<string, KeyboardKey[]> = {
-  "60percent": [
+  '60percent': [
     // First row (numbers)
     ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num, i) => ({
       position: [-4.5 + i, 0.25, -1.5] as [number, number, number],
@@ -26,29 +26,29 @@ const LAYOUTS: Record<string, KeyboardKey[]> = {
       arLabel: ['١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩', '٠'][i],
     })),
     // Second row (QWERTY/Arabic)
-    ...["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"].map((letter, i) => ({
-      position: [-4.5 + i, 0.25, -0.5],
+    ...['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'].map((letter, i) => ({
+      position: [-4.5 + i, 0.25, -0.5] as [number, number, number],
       label: letter,
-      arLabel: ["ض", "ص", "ث", "ق", "ف", "غ", "ع", "ه", "خ", "ح"][i],
+      arLabel: ['ض', 'ص', 'ث', 'ق', 'ف', 'غ', 'ع', 'ه', 'خ', 'ح'][i],
     })),
     // Third row (ASDF/Arabic)
-    ...["A", "S", "D", "F", "G", "H", "J", "K", "L"].map((letter, i) => ({
-      position: [-4 + i, 0.25, 0.5],
+    ...['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'].map((letter, i) => ({
+      position: [-4 + i, 0.25, 0.5] as [number, number, number],
       label: letter,
-      arLabel: ["ش", "س", "ي", "ب", "ل", "ا", "ت", "ن", "م"][i],
+      arLabel: ['ش', 'س', 'ي', 'ب', 'ل', 'ا', 'ت', 'ن', 'م'][i],
     })),
     // Fourth row (ZXCV/Arabic)
-    ...["Z", "X", "C", "V", "B", "N", "M"].map((letter, i) => ({
-      position: [-3.5 + i, 0.25, 1.5],
+    ...['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((letter, i) => ({
+      position: [-3.5 + i, 0.25, 1.5] as [number, number, number],
       label: letter,
-      arLabel: ["ئ", "ء", "ؤ", "ر", "لا", "ى", "ة"][i],
+      arLabel: ['ئ', 'ء', 'ؤ', 'ر', 'لا', 'ى', 'ة'][i],
     })),
     // Space bar
     {
-      position: [0, 0.25, 2.5],
-      label: "SPACE",
-      arLabel: "مسافة",
-      size: [5, 1],
+      position: [0, 0.25, 2.5] as [number, number, number],
+      label: 'SPACE',
+      arLabel: 'مسافة',
+      size: [5, 1] as [number, number],
     },
   ],
   "75percent": [
