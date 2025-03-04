@@ -1,8 +1,8 @@
 export interface KeyboardConfig {
-  layout: string;
-  switches: string;
-  keycaps: string;
+  layout: keyof typeof LAYOUTS;
+  switches: keyof typeof SWITCH_COLORS;
+  keycaps: keyof typeof KEYCAP_MATERIALS;
   backgroundImage: string;
   language: 'en' | 'ar';
-  color: string;
+  color: keyof typeof KEYBOARD_COLORS;
 }
