@@ -140,7 +140,7 @@ export function CustomizationPanel({
           <div className="space-y-2">
             <Label htmlFor="switches">Switches</Label>
             <Select
-              value={config.switches}
+              value={typeof config.switches === "string" ? config.switches : undefined}
               onValueChange={(value) =>
                 onChange({ ...config, switches: value })
               }>
@@ -179,7 +179,7 @@ export function CustomizationPanel({
           <div className="space-y-2">
             <Label htmlFor="keycaps">Keycaps</Label>
             <Select
-              value={config.keycaps}
+              value={typeof config.keycaps === "string" ? config.keycaps : undefined}
               onValueChange={(value) =>
                 onChange({ ...config, keycaps: value })
               }>
@@ -202,7 +202,7 @@ export function CustomizationPanel({
           <div className="space-y-2">
             <Label htmlFor="color">Keyboard Color</Label>
             <Select
-              value={config.color}
+              value={typeof config.color === "string" ? config.color : undefined}
               onValueChange={(value) => onChange({ ...config, color: value })}>
               <SelectTrigger>
                 <SelectValue placeholder="Select keyboard color" />
