@@ -231,16 +231,13 @@ export function CustomizationPanel({
           <Button
             className="w-full"
             onClick={() =>
-              alert(
-                `Saved configuration to your keyboard! 
-                Switches: ${config.switches}, 
-                Layout: ${config.layout}, 
-                Background Image: ${config.backgroundImage}, 
-                Language: ${config.language}, 
-                Color: ${config.color}, 
-                Keycaps: ${config.keycaps}`
-              )
-            }>
+alert(
+  `Saved configuration to your keyboard! 
+  Switches: ${typeof config.switches === "symbol" ? String(config.switches) : config.switches}, 
+  Layout: ${typeof config.layout === "symbol" ? String(config.layout) : config.layout}, 
+  Background Image: ${config.backgroundImage}, 
+  Language: ${config.language}`
+);
             ;
             <Palette className="mr-2 h-4 w-4" />
             Save Configuration
