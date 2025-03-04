@@ -121,9 +121,10 @@ export function CustomizationPanel({
 
           <div className="space-y-2">
             <Label htmlFor="layout">Layout</Label>
-            <Select
-              value={config.layout}
-              onValueChange={(value) => onChange({ ...config, layout: value })}>
+<Select
+  value={typeof config.layout === "string" ? config.layout : undefined}
+  onValueChange={(value) => onChange({ ...config, layout: value })}
+>
               <SelectTrigger>
                 <SelectValue placeholder="Select layout" />
               </SelectTrigger>
