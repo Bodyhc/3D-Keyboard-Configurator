@@ -388,7 +388,7 @@ export function Keyboard3D({ config }: Keyboard3DProps) {
   }, [config.backgroundImage]);
 
   const keys = LAYOUTS[config.layout] || LAYOUTS['60percent'];
-  const switchColor = SWITCH_COLORS[config.switches] || SWITCH_COLORS['cherry-red'];
+  const switchColor = SWITCH_COLORS[config.switches as keyof typeof SWITCH_COLORS] || SWITCH_COLORS['cherry-red'];
   const keycapMaterial = KEYCAP_MATERIALS[config.keycaps] || KEYCAP_MATERIALS['pbt-black'];
   const keyboardColor = KEYBOARD_COLORS[config.color] || KEYBOARD_COLORS['black'];
 
