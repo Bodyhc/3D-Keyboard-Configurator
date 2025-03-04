@@ -1,7 +1,6 @@
 "use client";
-import { Card } from "shadcn-ui";
 import { KeyboardConfig } from "@/lib/types";
-import { Card } from "@/components/ui/card";
+import { Card } from "components/ui/card";
 import { Label } from "@/components/ui/label";
 import {
   Select,
