@@ -1,5 +1,5 @@
 'use client';
-
+import * as THREE from "three";
 import { useEffect, useRef, useState } from 'react';
 import { useLoader, useFrame } from '@react-three/fiber';
 import { TextureLoader, MeshStandardMaterial, Color } from 'three';
