@@ -461,4 +461,3 @@ const Keyboard3D: React.FC<Keyboard3DProps> = ({ config }) => {
   );
 }
 }
-export { Keyboard3D };
