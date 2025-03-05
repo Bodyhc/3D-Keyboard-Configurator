@@ -363,16 +363,8 @@ const KEYBOARD_COLORS = {
 
 const Keyboard3D: React.FC<Keyboard3DProps> = ({ config }) => {
   const meshRef = useRef<Group>(null);
-  const texture = useTexture(config.backgroundImage); // تحميل الصورة من prop مباشرة
-
-  // Safely load texture
-  useEffect(() => {
-    if (!config.backgroundImage) {
-      setTexture(null);
-      setTextureError(false);
-      return;
-    }
-
+  const texture = useTexture(config.backgroundImage || "/textures/default.jpg"); // صورة افتراضية إذا لم توجد خلفية
+  
     const loader = new TextureLoader();
     loader.load(
       config.backgroundImage,
