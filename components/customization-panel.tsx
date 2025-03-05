@@ -1,5 +1,5 @@
 'use client';
-
+import { SWITCH_COLORS } from '@/components/keyboard-3d';
 import { KeyboardConfig } from '@/lib/types';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
