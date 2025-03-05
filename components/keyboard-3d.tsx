@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { Group } from "three";
 import { useLoader, useFrame } from '@react-three/fiber';
 import { TextureLoader, MeshStandardMaterial, Color } from 'three';
+import { useTexture } from "@react-three/drei";
+
 import { KeyboardConfig } from '@/lib/types';
 import { Box, Text } from '@react-three/drei';
 
