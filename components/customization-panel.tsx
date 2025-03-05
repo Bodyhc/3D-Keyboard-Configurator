@@ -146,7 +146,11 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
             <Label htmlFor="keycaps">Keycaps</Label>
               <Select
                 value={typeof config.keycaps === "string" ? config.keycaps : undefined}
-                onValueChange={(value) => onChange({ ...config, keycaps: value as keyof typeof KEYCAP_MATERIALS })}
+                onValueChange={(value) => {
+                  if (Object.keys(KEYCAP_MATERIALS).includes(value)) {
+                    onChange({ ...config, keycaps: value as keyof typeof KEYCAP_MATERIALS });
+                  }
+                }}
               >
               <SelectTrigger>
                 <SelectValue placeholder="Select keycaps" />
