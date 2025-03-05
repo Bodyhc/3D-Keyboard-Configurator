@@ -100,10 +100,10 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
 
           <div className="space-y-2">
             <Label htmlFor="layout">Layout</Label>
-            <Select
-              value={config.layout}
-              onValueChange={(value) => onChange({ ...config, layout: value })}
-            >
+          <Select
+            value={typeof config.layout === "string" ? config.layout : undefined}
+            onValueChange={(value) => onChange({ ...config, layout: value })}
+          >
               <SelectTrigger>
                 <SelectValue placeholder="Select layout" />
               </SelectTrigger>
@@ -119,7 +119,7 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
           <div className="space-y-2">
             <Label htmlFor="switches">Switches</Label>
             <Select
-              value={config.switches}
+              value={typeof config.switches === "string" ? config.switches : undefined}
               onValueChange={(value) => onChange({ ...config, switches: value })}
             >
               <SelectTrigger>
@@ -141,7 +141,7 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
           <div className="space-y-2">
             <Label htmlFor="keycaps">Keycaps</Label>
             <Select
-              value={config.keycaps}
+              value={typeof config.keycaps === "string" ? config.keycaps : undefined}
               onValueChange={(value) => onChange({ ...config, keycaps: value })}
             >
               <SelectTrigger>
@@ -163,7 +163,7 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
           <div className="space-y-2">
             <Label htmlFor="color">Keyboard Color</Label>
             <Select
-              value={config.color}
+              value={typeof config.color === "string" ? config.color : undefined}
               onValueChange={(value) => onChange({ ...config, color: value })}
             >
               <SelectTrigger>
