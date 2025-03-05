@@ -1,6 +1,7 @@
 'use client';
 import * as THREE from "three";
 import { useEffect, useRef, useState } from 'react';
+import { Group } from "three";
 import { useLoader, useFrame } from '@react-three/fiber';
 import { TextureLoader, MeshStandardMaterial, Color } from 'three';
 import { KeyboardConfig } from '@/lib/types';
@@ -399,7 +400,7 @@ const keyboardColor = KEYBOARD_COLORS[config.color as keyof typeof KEYBOARD_COLO
   });
 
   return (
-    <group ref={meshRef}>
+    const meshRef = useRef<Group>(null);
       {/* Keyboard base */}
       <mesh receiveShadow castShadow position={[0, 0, 0]}>
         <boxGeometry args={[config.layout === 'full' ? 16 : 12, 0.5, config.layout === '60percent' ? 6 : 8]} />
