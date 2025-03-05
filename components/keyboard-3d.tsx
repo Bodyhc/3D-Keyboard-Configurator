@@ -458,3 +458,4 @@ const keyboardColor = KEYBOARD_COLORS[config.color as keyof typeof KEYBOARD_COLO
   );
 
 }
+export default Keyboard3D;
