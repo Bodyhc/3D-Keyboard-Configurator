@@ -361,10 +361,9 @@ const KEYBOARD_COLORS = {
   'gold': '#ffd700',
 };
 
-export function Keyboard3D({ config }: Keyboard3DProps) {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const [texture, setTexture] = useState<THREE.Texture | null>(null);
-  const [textureError, setTextureError] = useState<boolean>(false);
+const Keyboard3D: React.FC<Keyboard3DProps> = ({ config }) => {
+  const meshRef = useRef<Group>(null);
+  const texture = useTexture(config.backgroundImage); // تحميل الصورة من prop مباشرة
 
   // Safely load texture
   useEffect(() => {
@@ -401,10 +400,6 @@ const keyboardColor = KEYBOARD_COLORS[config.color as keyof typeof KEYBOARD_COLO
     }
   });
   
-const Keyboard3D: React.FC<Keyboard3DProps> = ({ config }) => {
-  const meshRef = useRef<Group>(null);
-  const texture = useTexture("/textures/keyboard.jpg"); // مثال على تحميل texture
-
   return (
     <group ref={meshRef}>
       {/* Keyboard base */}
@@ -461,5 +456,5 @@ const Keyboard3D: React.FC<Keyboard3DProps> = ({ config }) => {
       <pointLight position={[-5, 5, -5]} intensity={0.3} />
     </group>
   );
-}
+
 }
