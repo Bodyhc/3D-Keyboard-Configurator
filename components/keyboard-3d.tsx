@@ -363,24 +363,10 @@ const KEYBOARD_COLORS = {
 
 const Keyboard3D: React.FC<Keyboard3DProps> = ({ config }) => {
   const meshRef = useRef<Group>(null);
-  const texture = useTexture(config.backgroundImage || "/textures/default.jpg"); // صورة افتراضية إذا لم توجد خلفية
   
-    const loader = new TextureLoader();
-    loader.load(
-      config.backgroundImage,
-      (loadedTexture) => {
-        setTexture(loadedTexture);
-        setTextureError(false);
-      },
-      undefined,
-      (error) => {
-        console.error('Error loading texture:', error);
-        setTexture(null);
-        setTextureError(true);
-      }
-    );
-  }, [config.backgroundImage]);
-
+  // تحميل صورة الخلفية أو استخدام صورة افتراضية
+  const texture = useTexture(config.backgroundImage || "/textures/default.jpg");    const loader = new TextureLoader();
+  
 const keys = LAYOUTS[config.layout as keyof typeof LAYOUTS] || LAYOUTS['60percent'];
 const switchColor = SWITCH_COLORS[config.switches as keyof typeof SWITCH_COLORS] || SWITCH_COLORS['cherry-red'];
 const keycapMaterial = KEYCAP_MATERIALS[config.keycaps as keyof typeof KEYCAP_MATERIALS] || KEYCAP_MATERIALS['pbt-black'];
