@@ -120,7 +120,11 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
             <Label htmlFor="switches">Switches</Label>
             <Select
               value={typeof config.switches === "string" ? config.switches : undefined}
-              onValueChange={(value) => onChange({ ...config, switches: value })}
+                onValueChange={(value) => {
+                  if (Object.keys(SWITCH_COLORS).includes(value)) {
+                    onChange({ ...config, switches: value as keyof typeof SWITCH_COLORS });
+                  }
+                }}
             >
               <SelectTrigger>
                 <SelectValue placeholder="Select switches" />
