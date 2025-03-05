@@ -144,10 +144,10 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
 
           <div className="space-y-2">
             <Label htmlFor="keycaps">Keycaps</Label>
-            <Select
-              value={typeof config.keycaps === "string" ? config.keycaps : undefined}
-              onValueChange={(value) => onChange({ ...config, keycaps: value })}
-            >
+              <Select
+                value={typeof config.keycaps === "string" ? config.keycaps : undefined}
+                onValueChange={(value) => onChange({ ...config, keycaps: value as keyof typeof KEYCAP_MATERIALS })}
+              >
               <SelectTrigger>
                 <SelectValue placeholder="Select keycaps" />
               </SelectTrigger>
