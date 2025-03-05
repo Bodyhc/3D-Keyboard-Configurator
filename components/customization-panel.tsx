@@ -221,11 +221,6 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
               </div>
             )}
             <p className="text-xs text-muted-foreground mt-1">
-              Try these example URLs:
-              <br />
-              https://images.unsplash.com/photo-1550745165-9bc0b252726f
-              <br />
-              https://images.unsplash.com/photo-1563089145-599997674d42
             </p>
           </div>
 
