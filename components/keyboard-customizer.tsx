@@ -4,6 +4,7 @@ import { useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
 import { Keyboard3D } from '@/components/keyboard-3d';
+import Keyboard3D from "@/components/keyboard-3d";
 import { CustomizationPanel } from '@/components/customization-panel';
 import { KeyboardConfig } from '@/lib/types';
 
