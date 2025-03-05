@@ -399,8 +399,9 @@ const keyboardColor = KEYBOARD_COLORS[config.color as keyof typeof KEYBOARD_COLO
     }
   });
   
-const Keyboard3D = () => {
-  const meshRef = useRef<Group>(null); // 👈 يجب أن يكون هنا قبل `return`
+const Keyboard3D: React.FC<Keyboard3DProps> = ({ config }) => {
+  const meshRef = useRef<Group>(null);
+  const texture = useTexture("/textures/keyboard.jpg"); // مثال على تحميل texture
 
   return (
     <group ref={meshRef}>
@@ -460,4 +461,4 @@ const Keyboard3D = () => {
   );
 }
 }
-export default Keyboard3D;
+export { Keyboard3D };
