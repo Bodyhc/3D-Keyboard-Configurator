@@ -387,10 +387,10 @@ export function Keyboard3D({ config }: Keyboard3DProps) {
     );
   }, [config.backgroundImage]);
 
-const keys = LAYOUTS[config.layout] || LAYOUTS['60percent'];
-const switchColor = SWITCH_COLORS[config.switches] || SWITCH_COLORS['cherry-red'];
-const keycapMaterial = KEYCAP_MATERIALS[config.keycaps] || KEYCAP_MATERIALS['pbt-black'];
-const keyboardColor = KEYBOARD_COLORS[config.color] || KEYBOARD_COLORS['black'];
+const keys = LAYOUTS[config.layout as keyof typeof LAYOUTS] || LAYOUTS['60percent'];
+const switchColor = SWITCH_COLORS[config.switches as keyof typeof SWITCH_COLORS] || SWITCH_COLORS['cherry-red'];
+const keycapMaterial = KEYCAP_MATERIALS[config.keycaps as keyof typeof KEYCAP_MATERIALS] || KEYCAP_MATERIALS['pbt-black'];
+const keyboardColor = KEYBOARD_COLORS[config.color as keyof typeof KEYBOARD_COLORS] || KEYBOARD_COLORS['black'];
 
   useFrame((state) => {
     if (meshRef.current) {
