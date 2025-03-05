@@ -20,7 +20,7 @@ interface Keyboard3DProps {
   config: KeyboardConfig;
 }
 
-const LAYOUTS: Record<string, KeyboardKey[]> = {
+export const LAYOUTS: Record<string, KeyboardKey[]> = {
   '60percent': [
     // First row (numbers)
     ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num, i) => ({
@@ -320,7 +320,7 @@ const LAYOUTS: Record<string, KeyboardKey[]> = {
   ],
 };
 
-const SWITCH_COLORS = {
+export const SWITCH_COLORS = {
   'cherry-red': '#ff0000',
   'cherry-blue': '#0000ff',
   'cherry-brown': '#8b4513',
@@ -331,7 +331,7 @@ const SWITCH_COLORS = {
   'optical-purple': '#800080',
 };
 
-const KEYCAP_MATERIALS = {
+export const KEYCAP_MATERIALS = {
   'pbt-black': { color: '#2d2d2d', roughness: 0.7, metalness: 0 },
   'abs-white': { color: '#ffffff', roughness: 0.5, metalness: 0.1 },
   'pudding': { color: '#ffffff', roughness: 0.3, metalness: 0.2, opacity: 0.8, transparent: true },
@@ -342,7 +342,7 @@ const KEYCAP_MATERIALS = {
   'rgb': { color: '#ffffff', roughness: 0.3, metalness: 0.5, emissive: '#ffffff' },
 };
 
-const KEYBOARD_COLORS = {
+export const KEYBOARD_COLORS = {
   'black': '#222222',
   'white': '#ffffff',
   'silver': '#c0c0c0',
