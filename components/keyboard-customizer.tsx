@@ -7,6 +7,8 @@ import Keyboard3D from '@/components/keyboard-3d';
 import { CustomizationPanel } from '@/components/customization-panel';
 import { KeyboardConfig } from '@/lib/types';
 import { useTexture } from "@react-three/drei";
+import { toast } from "react-hot-toast";
+
 
 export default function KeyboardCustomizer() {
   const [config, setConfig] = useState<KeyboardConfig>({
