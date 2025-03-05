@@ -329,7 +329,7 @@ export const SWITCH_COLORS = {
   'gateron-black': '#222222',
   'kailh-box-white': '#ffffff',
   'optical-purple': '#800080',
-};
+}as const;
 
 export const KEYCAP_MATERIALS = {
   'pbt-black': { color: '#2d2d2d', roughness: 0.7, metalness: 0 },
