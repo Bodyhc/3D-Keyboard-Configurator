@@ -1,6 +1,7 @@
 'use client';
 import { SWITCH_COLORS } from '@/components/keyboard-3d';
 import { KEYCAP_MATERIALS } from '@/components/keyboard-3d';
+import { KEYBOARD_COLORS } from '@/components/keyboard-3d';
 import { KeyboardConfig } from '@/lib/types';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -173,7 +174,11 @@ export function CustomizationPanel({ config, onChange }: CustomizationPanelProps
             <Label htmlFor="color">Keyboard Color</Label>
             <Select
               value={typeof config.color === "string" ? config.color : undefined}
-              onValueChange={(value) => onChange({ ...config, color: value })}
+              onValueChange={(value) => {
+                if (Object.keys(KEYBOARD_COLORS).includes(value)) {
+                  onChange({ ...config, color: value as keyof typeof KEYBOARD_COLORS });
+                }
+              }}
             >
               <SelectTrigger>
                 <SelectValue placeholder="Select keyboard color" />
