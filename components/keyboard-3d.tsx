@@ -398,9 +398,12 @@ const keyboardColor = KEYBOARD_COLORS[config.color as keyof typeof KEYBOARD_COLO
       meshRef.current.rotation.y = Math.sin(state.clock.getElapsedTime() * 0.2) * 0.1;
     }
   });
+  
+const Keyboard3D = () => {
+  const meshRef = useRef<Group>(null); // 👈 يجب أن يكون هنا قبل `return`
 
   return (
-    const meshRef = useRef<Group>(null);
+    <group ref={meshRef}>
       {/* Keyboard base */}
       <mesh receiveShadow castShadow position={[0, 0, 0]}>
         <boxGeometry args={[config.layout === 'full' ? 16 : 12, 0.5, config.layout === '60percent' ? 6 : 8]} />
