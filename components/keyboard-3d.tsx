@@ -460,3 +460,4 @@ const Keyboard3D = () => {
   );
 }
 }
+export default Keyboard3D;
